@@ -1,21 +1,33 @@
 print('\n⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂ PYTHON CALCULATOR VERSION 1 ⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂\n')
 
-x = float(input('Enter the FIRST number: '))
-y = float(input('Enter the SECOND number: '))
+def add(firtNum,secondNum):
+    return firtNum+secondNum
+
+def sub(firtNum,secondNum):
+    return firtNum-secondNum
+
+def mul(firtNum,secondNum):
+    return firtNum*secondNum
+
+def div(firtNum,secondNum):
+    return firtNum/secondNum
+
+choice_firtNum = float(input('Enter the FIRST number: '))
+choice_secondNum = float(input('Enter the SECOND number: '))
 
 operation = input('Choose the following options: \n\n[a] - Addition \n[b] - Subtraction \n[c] - Multiplication \n[d] - Division \n\n▶️  Your choice was: ')
 
 for oper in operation:
     if  oper == 'a':
-        print('👌 Addition %r + %r =' %(x,y), x+y)
+        print('\n🧮 Addition %r + %r =' %(choice_firtNum,choice_secondNum), add(choice_firtNum,choice_secondNum))
     elif oper == 'b':
-        print('👌 Subtraction %r - %r =' %(x,y), x-y)
+        print('\n🧮 Subtraction %r - %r =' %(choice_firtNum,choice_secondNum), sub(choice_firtNum,choice_secondNum))
     elif oper == 'c':
-        print('👌 Multiplication %r * %r =' %(x,y), x*y)
+        print('\n🧮 Multiplication %r * %r =' %(choice_firtNum,choice_secondNum), mul(choice_firtNum,choice_secondNum))
     elif oper == 'd':
-        if y != 0:
-            print('👌 Division %r / %r =' %(x,y), x/y)
+        if choice_secondNum != 0:
+            print('\n🧮 Division %r / %r =' %(choice_firtNum,choice_secondNum), div(choice_firtNum,choice_secondNum))
         else:
-            print('⛔ Error! Cannot perform division by zero.')
+            print('\n⛔ Error! Cannot perform division by zero.')
     else:
-        print('⛔ Erro! \nChoose the following options: \n\n[a] - Addition \n[b] - Subtraction \n[c] - Multiplication \n[d]  - Division ')
+        print('\n⛔ Erro! \nChoose the following options: \n\n[a] - Addition \n[b] - Subtraction \n[c] - Multiplication \n[d]  - Division ')
